@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 */
 public class CarTest {
 	
-	
+	 int gas = 100;
 	
 	/**
 	*тест метода drive(int value).
@@ -22,9 +22,9 @@ public class CarTest {
 	@Test
 	public void whenDriveThenLeft() {
 		Car car = new Car();
-		int gas = 100;
+		//int gas = 100;
 		car.drive(20);
-		assertThat(gas, is(80));
+		assertThat(car.gas, is(80));
 	}
 	
 	/**
@@ -33,9 +33,9 @@ public class CarTest {
 	@Test
 	public void whenFillThenGas() {		
 		Car car = new Car();
-		int gas = 50;
+		//int gas = 50;
 		car.fill(150);
-		assertThat(gas, is(150));
+		assertThat(car.gas, is(150));
 	}
 	
 	/**

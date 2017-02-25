@@ -2,7 +2,7 @@ package rally;
 
 public class Car {
 
-	private int gas = 100;
+	public int gas = 100;
 	
 	public void drive(int value) {
 		this.gas = this.gas - value;
