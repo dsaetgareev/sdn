@@ -22,7 +22,7 @@ public class CarTest {
 	@Test
 	public void whenDriveThenLeft() {
 		Car car = new Car();
-		//gas = 100;
+		int gas = 100;
 		car.drive(20);
 		assertThat(gas, is(80));
 	}
@@ -33,7 +33,7 @@ public class CarTest {
 	@Test
 	public void whenFillThenGas() {		
 		Car car = new Car();
-		//int gas = 50;
+		int gas = 50;
 		car.fill(150);
 		assertThat(gas, is(150));
 	}
