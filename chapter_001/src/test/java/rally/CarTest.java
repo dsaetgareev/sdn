@@ -14,17 +14,17 @@ import static org.junit.Assert.*;
 */
 public class CarTest {
 	
-	private int gas = 100;
+	
 	
 	/**
 	*тест метода drive(int value).
 	*/
 	@Test
-	public void whenDriveThenLeft() {		
+	public void whenDriveThenLeft() {
 		Car car = new Car();
 		//gas = 100;
-		//car.drive(20);
-		assertThat(car.drive(20), is(80));
+		car.drive(20);
+		assertThat(gas, is(80));
 	}
 	
 	/**
