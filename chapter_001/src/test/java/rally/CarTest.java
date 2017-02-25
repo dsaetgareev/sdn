@@ -14,39 +14,41 @@ import static org.junit.Assert.*;
 */
 public class CarTest {
 	
+	private int gas = 100;
 	
 	/**
 	*тест метода drive(int value).
 	*/
 	@Test
-	public void whenDriveThenLeft() {
-		int gas = 100;
-		Car car = new Car();		
-		car.drive(10);
-		assertThat(gas, is("90"));
+	public void whenDriveThenLeft() {		
+		Car car = new Car();
+		//gas = 100;
+		//car.drive(20);
+		assertThat(car.drive(20), is(80));
 	}
 	
 	/**
 	*test method fill(int value).
 	*/
 	@Test
-	public void whenFillThenGas() {
-		int gas = 50;
+	public void whenFillThenGas() {		
 		Car car = new Car();
+		//int gas = 50;
 		car.fill(150);
-		assertThat(gas, is("150"));
+		assertThat(gas, is(150));
 	}
 	
 	/**
 	*test method showGas().
 	*/
-	/**@Test
+	@Test
 	public void whenGasThenShow() {
-	int gas = 100;
-	Car car = new Car();
-	String result = car.showGas();
-	assertThat(result, is("Gas: 100"));
-	}*/
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(out));
+		Car car = new Car();
+		car.showGas();
+		assertThat(out.toString(), is("Gas: 100\r\n"));
+	}
 	
 
 }
