@@ -49,6 +49,7 @@ public class StartUI {
         ConsoleInput input = new ValidateInput();
         Tracker tracker = new Tracker();
         new StartUI(input, tracker).init();
+        System.out.println("ok");
     }
 
 }
